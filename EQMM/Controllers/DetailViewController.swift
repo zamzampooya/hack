@@ -102,7 +102,7 @@ class DetailViewController: UIViewController, MFMailComposeViewControllerDelegat
         
     }
     func setData(document: Document) {
-        self.docTitle.text = (document.state?.preferedText() ?? "Quote") + " \(document.id!)"
+        self.docTitle.text = self.document.customer
         self.quoteNumber.text = (self.document.state?.preferedText() ?? "Quote") + " \(self.document.id!)"
         self.discount.text = "\(self.document.discount!)"
         self.subtotalDiscount.text = "EUR " + "\(self.document.total! - self.document.totalVat!)"
