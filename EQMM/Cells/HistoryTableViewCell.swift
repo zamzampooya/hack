@@ -31,17 +31,17 @@ class HistoryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func setContent(history: History) {
-        self.title.text = history.state!.rawValue
+        self.title.text = history.state!.preferedText()
         self.date.text = history.date
         switch history.state! {
         case .quoteSent:
             self.statusImage.image = #imageLiteral(resourceName: "Group 719")
         case .quoteSeen:
             self.statusImage.image = #imageLiteral(resourceName: "Group 719")
-        case .approved:
+        case .quoteAccepted:
             self.statusImage.image = #imageLiteral(resourceName: "Group 719")
         case .orderSent:
-            self.imageView?.image = #imageLiteral(resourceName: "Group 728")
+            self.statusImage.image = #imageLiteral(resourceName: "Group 728")
         default:
             self.statusImage.image = #imageLiteral(resourceName: "Group 719")
         }

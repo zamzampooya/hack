@@ -44,19 +44,25 @@ class HistoryViewController: UIViewController {
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         if self.document.history!.contains(where: { (history) -> Bool in
-           return history.state == .approved
+            return history.state == .orderSent
         }) {
-            self.document.history?.append(History(date: "04.02.2019", comment: "", state: .orderSent))
+            self.historyTableView.reloadData()
+            refreshControl.endRefreshing()
+            return
+        } else if self.document.history!.contains(where: { (history) -> Bool in
+           return history.state == .quoteAccepted
+        }) {
+            self.document.history?.append(History(date: "08.05.2019", comment: "", state: .orderSent))
 
         } else if self.document.history!.contains(where: { (history) -> Bool in
             return history.state == .quoteSeen
         }) {
-            self.document.history?.append(History(date: "03.02.2019", comment: "", state: .quoteAccepted))
+            self.document.history?.append(History(date: "08.05.2019", comment: "", state: .quoteAccepted))
 
         } else if self.document.history!.contains(where: { (history) -> Bool in
             return history.state == .quoteSent
         }) {
-            self.document.history?.append(History(date: "03.02.2019", comment: "", state: .quoteSeen))
+            self.document.history?.append(History(date: "08.05.2019", comment: "", state: .quoteSeen))
         }
         self.historyTableView.reloadData()
         refreshControl.endRefreshing()

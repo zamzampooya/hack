@@ -64,18 +64,46 @@ enum DocumentState: String, Codable {
     case quote
     case invoice
     case order
+    func preferedText() -> String {
+        switch self {
+        case .quote:
+            return "Quote"
+        case .invoice:
+            return "Invoice"
+        case .order:
+            return "Order"
+        }
+    }
 }
 
 enum HistoryState: String, Codable{
     case quoteSent
     case quoteSeen
     case quoteAccepted
-    case approved
     case orderSent
+    case orderSeen
+    case invoiceSent
+    func preferedText() -> String {
+        switch self {
+        case .quoteSent:
+            return "Quote Sent"
+        case .quoteSeen:
+            return "Quote Seen"
+        case .quoteAccepted:
+            return "Quote Accepted"
+        case .orderSent:
+            return "Order Sent"
+        case .orderSeen:
+            return "Order Seen"
+        case .invoiceSent:
+            return "Invoice Sent"
+        }
+    }
+
 }
 
 class MockData: NSObject {
     static let shared = MockData()
-    var documents = [Document(id: 2, customer: "Finlandia", state: DocumentState(rawValue: "quote"), description: "", total: 50, discount: 0, orderlines: nil, history: [History(date: "2019.05.08", comment: nil, state: HistoryState(rawValue: "quoteSent"))], date: nil, totalVat: 300),
-                                                    Document(id: 3, customer: "Fazer", state: DocumentState(rawValue: "quote"), description: "", total: 90, discount: 0, orderlines: nil, history: [History(date: "2019.05.09", comment: nil, state: HistoryState(rawValue: "quoteSent"))], date: nil, totalVat: 300)]
+    var documents = [Document(id: 10065, customer: "Finlandia", state: DocumentState(rawValue: "quote"), description: "", total: 50, discount: 0, orderlines: nil, history: [History(date: "06.05.2019", comment: nil, state: HistoryState(rawValue: "quoteSent"))], date: nil, totalVat: 300),
+                                                    Document(id: 10066, customer: "Fazer", state: DocumentState(rawValue: "quote"), description: "", total: 90, discount: 0, orderlines: nil, history: [History(date: "07.05.2019", comment: nil, state: HistoryState(rawValue: "quoteSent"))], date: nil, totalVat: 300)]
 }

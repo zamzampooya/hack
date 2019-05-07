@@ -25,9 +25,10 @@ class ItemTableViewCell: UITableViewCell {
     }
     func setConent(orderLine: OrderLine) {
         self.name.text = orderLine.name
-        self.count.text = orderLine.numberOfItems
         let count = Double(orderLine.numberOfItems ?? "0") ?? 0
-        self.price.text = "\(orderLine.price! * count)"
+
+        self.count.text = "EUR " + "\(orderLine.price!)" + " * " + "\(count)"
+        self.price.text = "EUR " + "\(orderLine.price! * count)"
     }
 
 }
