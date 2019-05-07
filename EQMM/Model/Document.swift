@@ -41,10 +41,10 @@ class Document: Codable{
     var orderlines: [OrderLine]?
     var history: [History]?
     var date: String?
-    var totalVat: Double?
+    var totalVat: Float?
     public init() {}
     
-    public init(id: Int?, customer: String?,state: DocumentState?, description: String?,total: Float?, discount: Float?, orderlines: [OrderLine]?, history: [History]?, date: String?, totalVat: Double?) {
+    public init(id: Int?, customer: String?,state: DocumentState?, description: String?,total: Float?, discount: Float?, orderlines: [OrderLine]?, history: [History]?, date: String?, totalVat: Float?) {
         self.id = id
         self.customer = customer
         self.state = state
@@ -67,11 +67,11 @@ enum DocumentState: String, Codable {
     func preferedText() -> String {
         switch self {
         case .quote:
-            return "Quote"
+            return "Quote no."
         case .invoice:
-            return "Invoice"
+            return "Invoice no."
         case .order:
-            return "Order"
+            return "Order no."
         }
     }
 }

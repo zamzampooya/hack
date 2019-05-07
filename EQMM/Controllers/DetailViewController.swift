@@ -42,16 +42,16 @@ class DetailViewController: UIViewController, MFMailComposeViewControllerDelegat
     @IBAction func sendEmail(_ sender: UIButton) {
         if( MFMailComposeViewController.canSendMail()){
             print("Can send email.")
-            
+
             let mailComposer = MFMailComposeViewController()
             mailComposer.mailComposeDelegate = self
-            
+
             //Set to recipients
-            mailComposer.setToRecipients(["zamzampooya@gmail.com"])
-            
+            mailComposer.setToRecipients(["tatu.haimila@visma.com"])
+
             //Set the subject
-            mailComposer.setSubject("Quote no. \(self.document.id!) from Awesome Logo Designs")
-            
+            mailComposer.setSubject("\(self.document.state!.preferedText()) \(self.document.id!) from Awesome Logo Designs")
+
             //set mail body
             var pathPDF = ""//"\(NSTemporaryDirectory())contract.pdf"
 
@@ -61,10 +61,10 @@ class DetailViewController: UIViewController, MFMailComposeViewControllerDelegat
             if let fileData = NSData(contentsOfFile: pathPDF)
             {
                 print("File data loaded.")
-                mailComposer.addAttachmentData(fileData as Data, mimeType: "application/pdf", fileName: "contract.pdf")
+                mailComposer.addAttachmentData(fileData as Data, mimeType: "application/pdf", fileName: "\(self.document.state!.preferedText()) \(self.document.id!).pdf")
             }
-            mailComposer.setMessageBody("<a href='easyflow://mainscreen' class='button'>Open In APP</a>", isHTML: true)
-            
+            mailComposer.setMessageBody("<a href='easyflow://mainscreen'>Open APP</a>", isHTML: true)
+
             //this will compose and present mail to user
             self.present(mailComposer, animated: true, completion: nil)
         }
@@ -72,6 +72,22 @@ class DetailViewController: UIViewController, MFMailComposeViewControllerDelegat
         {
             print("email is not supported")
         }
+        
+//        var filesToShare = [Any]()
+//                //set mail body
+//                        var pathPDF = ""//"\(NSTemporaryDirectory())contract.pdf"
+//
+//                       if let path2 = Bundle.main.path(forResource: "Quoteno10067Nokia", ofType: "pdf") {
+//                        pathPDF = path2
+//                       }
+//                    // Add the path of the file to the Array
+//        filesToShare.append(pathPDF)
+//
+//        // Make the activityViewContoller which shows the share-view
+//        let activityViewController = UIActivityViewController(activityItems: filesToShare, applicationActivities: nil)
+//
+//        // Show the share-view
+//        self.present(activityViewController, animated: true, completion: nil)
         
     }
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
@@ -82,16 +98,16 @@ class DetailViewController: UIViewController, MFMailComposeViewControllerDelegat
     }
   
     func setContent() {
-        self.document = Document(id: 10067, customer: "Nokia", state: DocumentState(rawValue: "quote"), description: "", total: 1500, discount: 0, orderlines: [OrderLine(name: "Water Bottle", numberOfItems: "100", price: 2.4), OrderLine(name: "T-shirt", numberOfItems: "100", price: 5.6), OrderLine(name: "Backpack", numberOfItems: "50", price: 8)], history: [History(date: "01.02.19", comment: "", state: .quoteSent)], date: nil, totalVat: 300)
+        self.document = Document(id: 10067, customer: "Nokia", state: DocumentState(rawValue: "quote"), description: "", total: 1500, discount: 0, orderlines: [OrderLine(name: "Water Bottle", numberOfItems: "100", price: 3), OrderLine(name: "T-shirt", numberOfItems: "100", price: 7), OrderLine(name: "Backpack", numberOfItems: "50", price: 10)], history: [History(date: "01.02.19", comment: "", state: .quoteSent)], date: nil, totalVat: 300)
         
     }
     func setData(document: Document) {
         self.docTitle.text = (document.state?.preferedText() ?? "Quote") + " \(document.id!)"
-        self.quoteNumber.text = self.document.state?.rawValue ?? "" + "\(self.document.id!)"
+        self.quoteNumber.text = (self.document.state?.preferedText() ?? "Quote") + " \(self.document.id!)"
         self.discount.text = "\(self.document.discount!)"
-        self.subtotalDiscount.text = "\(self.document.total!)"
-        self.vat.text = "\(self.document.totalVat!)"
-        self.total.text = "\(self.document.total!)"
+        self.subtotalDiscount.text = "EUR " + "\(self.document.total! - self.document.totalVat!)"
+        self.vat.text = "EUR " + "\(self.document.totalVat!)"
+        self.total.text = "EUR " + "\(self.document.total!)"
         
     }
 }
