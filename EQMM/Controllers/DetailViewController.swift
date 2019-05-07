@@ -63,7 +63,7 @@ class DetailViewController: UIViewController, MFMailComposeViewControllerDelegat
                 print("File data loaded.")
                 mailComposer.addAttachmentData(fileData as Data, mimeType: "application/pdf", fileName: "\(self.document.state!.preferedText()) \(self.document.id!).pdf")
             }
-            mailComposer.setMessageBody("<a href='easyflow://mainscreen'>Open APP</a>", isHTML: true)
+            mailComposer.setMessageBody("easyflow://mainscreen", isHTML: true)
 
             //this will compose and present mail to user
             self.present(mailComposer, animated: true, completion: nil)
