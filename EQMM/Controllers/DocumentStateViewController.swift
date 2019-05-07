@@ -53,7 +53,11 @@ extension DocumentStateViewController: UITableViewDelegate {
         return 69
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // go to the history
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController
+        controller.document = MockData.shared.documents.last!
+        self.present(controller, animated: true, completion: nil)
+
     }
 }
 

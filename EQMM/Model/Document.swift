@@ -71,6 +71,7 @@ enum HistoryState: String, Codable{
     case quoteSeen
     case quoteAccepted
     case approved
+    case orderSent
 }
 
 class MockData: NSObject {

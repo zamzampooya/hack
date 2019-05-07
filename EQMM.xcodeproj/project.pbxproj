@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD23A0812281DF1E00D47739 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23A0802281DF1E00D47739 /* HistoryViewController.swift */; };
+		BD23A0832281E2D900D47739 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23A0822281E2D900D47739 /* HistoryTableViewCell.swift */; };
 		BDFD1A7E22817EA400D6FE7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1A7D22817EA400D6FE7E /* AppDelegate.swift */; };
 		BDFD1A8022817EA400D6FE7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1A7F22817EA400D6FE7E /* ViewController.swift */; };
 		BDFD1A8322817EA400D6FE7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDFD1A8122817EA400D6FE7E /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD23A0802281DF1E00D47739 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		BD23A0822281E2D900D47739 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		BDFD1A7A22817EA400D6FE7E /* EQMM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EQMM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFD1A7D22817EA400D6FE7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDFD1A7F22817EA400D6FE7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 			children = (
 				BDFD1A9522819B0500D6FE7E /* SalesTableViewCell.swift */,
 				BDFD1A9D2281C38600D6FE7E /* ItemTableViewCell.swift */,
+				BD23A0822281E2D900D47739 /* HistoryTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			children = (
 				BDFD1A9B2281B06000D6FE7E /* DocumentStateViewController.swift */,
 				BDFD1A9F2281C3EA00D6FE7E /* DetailViewController.swift */,
+				BD23A0802281DF1E00D47739 /* HistoryViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -201,8 +207,10 @@
 				BDFD1A9C2281B06000D6FE7E /* DocumentStateViewController.swift in Sources */,
 				BDFD1A8022817EA400D6FE7E /* ViewController.swift in Sources */,
 				BDFD1A9622819B0500D6FE7E /* SalesTableViewCell.swift in Sources */,
+				BD23A0832281E2D900D47739 /* HistoryTableViewCell.swift in Sources */,
 				BDFD1A7E22817EA400D6FE7E /* AppDelegate.swift in Sources */,
 				BDFD1A9E2281C38600D6FE7E /* ItemTableViewCell.swift in Sources */,
+				BD23A0812281DF1E00D47739 /* HistoryViewController.swift in Sources */,
 				BDFD1A992281A3E600D6FE7E /* Document.swift in Sources */,
 				BDFD1AA02281C3EA00D6FE7E /* DetailViewController.swift in Sources */,
 			);

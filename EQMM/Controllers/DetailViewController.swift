@@ -82,7 +82,7 @@ class DetailViewController: UIViewController, MFMailComposeViewControllerDelegat
     }
   
     func setContent() {
-        self.document = Document(id: 10067, customer: "Nokia", state: DocumentState(rawValue: "quote"), description: "", total: 1500, discount: 0, orderlines: [OrderLine(name: "Water Bottle", numberOfItems: "100", price: 2.4), OrderLine(name: "T-shirt", numberOfItems: "100", price: 5.6), OrderLine(name: "Backpack", numberOfItems: "50", price: 8)], history: nil, date: nil, totalVat: 300)
+        self.document = Document(id: 10067, customer: "Nokia", state: DocumentState(rawValue: "quote"), description: "", total: 1500, discount: 0, orderlines: [OrderLine(name: "Water Bottle", numberOfItems: "100", price: 2.4), OrderLine(name: "T-shirt", numberOfItems: "100", price: 5.6), OrderLine(name: "Backpack", numberOfItems: "50", price: 8)], history: [History(date: "01.02.19", comment: "", state: .quoteSent)], date: nil, totalVat: 300)
         
     }
     func setData(document: Document) {
