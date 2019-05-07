@@ -12,6 +12,13 @@
 		BDFD1A8322817EA400D6FE7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDFD1A8122817EA400D6FE7E /* Main.storyboard */; };
 		BDFD1A8522817EA500D6FE7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDFD1A8422817EA500D6FE7E /* Assets.xcassets */; };
 		BDFD1A8822817EA500D6FE7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDFD1A8622817EA500D6FE7E /* LaunchScreen.storyboard */; };
+		BDFD1A912281920C00D6FE7E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1A902281920C00D6FE7E /* UIViewExtension.swift */; };
+		BDFD1A9622819B0500D6FE7E /* SalesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1A9522819B0500D6FE7E /* SalesTableViewCell.swift */; };
+		BDFD1A992281A3E600D6FE7E /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1A982281A3E600D6FE7E /* Document.swift */; };
+		BDFD1A9C2281B06000D6FE7E /* DocumentStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1A9B2281B06000D6FE7E /* DocumentStateViewController.swift */; };
+		BDFD1A9E2281C38600D6FE7E /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1A9D2281C38600D6FE7E /* ItemTableViewCell.swift */; };
+		BDFD1AA02281C3EA00D6FE7E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1A9F2281C3EA00D6FE7E /* DetailViewController.swift */; };
+		BDFD1AA32281C6EE00D6FE7E /* Quoteno10067Nokia.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BDFD1AA22281C6EE00D6FE7E /* Quoteno10067Nokia.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		BDFD1A8422817EA500D6FE7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDFD1A8722817EA500D6FE7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDFD1A8922817EA500D6FE7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDFD1A902281920C00D6FE7E /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		BDFD1A9522819B0500D6FE7E /* SalesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesTableViewCell.swift; sourceTree = "<group>"; };
+		BDFD1A982281A3E600D6FE7E /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		BDFD1A9B2281B06000D6FE7E /* DocumentStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentStateViewController.swift; sourceTree = "<group>"; };
+		BDFD1A9D2281C38600D6FE7E /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		BDFD1A9F2281C3EA00D6FE7E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BDFD1AA22281C6EE00D6FE7E /* Quoteno10067Nokia.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Quoteno10067Nokia.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,11 @@
 		BDFD1A7C22817EA400D6FE7E /* EQMM */ = {
 			isa = PBXGroup;
 			children = (
+				BDFD1AA12281C6DF00D6FE7E /* Resources */,
+				BDFD1A9A2281B03800D6FE7E /* Controllers */,
+				BDFD1A972281A3CE00D6FE7E /* Model */,
+				BDFD1A92228195A600D6FE7E /* Cells */,
+				BDFD1A8F228191EF00D6FE7E /* Extension */,
 				BDFD1A7D22817EA400D6FE7E /* AppDelegate.swift */,
 				BDFD1A7F22817EA400D6FE7E /* ViewController.swift */,
 				BDFD1A8122817EA400D6FE7E /* Main.storyboard */,
@@ -62,6 +81,48 @@
 				BDFD1A8922817EA500D6FE7E /* Info.plist */,
 			);
 			path = EQMM;
+			sourceTree = "<group>";
+		};
+		BDFD1A8F228191EF00D6FE7E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BDFD1A902281920C00D6FE7E /* UIViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		BDFD1A92228195A600D6FE7E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BDFD1A9522819B0500D6FE7E /* SalesTableViewCell.swift */,
+				BDFD1A9D2281C38600D6FE7E /* ItemTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BDFD1A972281A3CE00D6FE7E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BDFD1A982281A3E600D6FE7E /* Document.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BDFD1A9A2281B03800D6FE7E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BDFD1A9B2281B06000D6FE7E /* DocumentStateViewController.swift */,
+				BDFD1A9F2281C3EA00D6FE7E /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BDFD1AA12281C6DF00D6FE7E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BDFD1AA22281C6EE00D6FE7E /* Quoteno10067Nokia.pdf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +185,7 @@
 			files = (
 				BDFD1A8822817EA500D6FE7E /* LaunchScreen.storyboard in Resources */,
 				BDFD1A8522817EA500D6FE7E /* Assets.xcassets in Resources */,
+				BDFD1AA32281C6EE00D6FE7E /* Quoteno10067Nokia.pdf in Resources */,
 				BDFD1A8322817EA400D6FE7E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +197,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDFD1A912281920C00D6FE7E /* UIViewExtension.swift in Sources */,
+				BDFD1A9C2281B06000D6FE7E /* DocumentStateViewController.swift in Sources */,
 				BDFD1A8022817EA400D6FE7E /* ViewController.swift in Sources */,
+				BDFD1A9622819B0500D6FE7E /* SalesTableViewCell.swift in Sources */,
 				BDFD1A7E22817EA400D6FE7E /* AppDelegate.swift in Sources */,
+				BDFD1A9E2281C38600D6FE7E /* ItemTableViewCell.swift in Sources */,
+				BDFD1A992281A3E600D6FE7E /* Document.swift in Sources */,
+				BDFD1AA02281C3EA00D6FE7E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
